@@ -1,9 +1,8 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	background-color: #ccc;
-	padding: 10px 0;
-	@extend %clear_a;
+	// background-color: #ccc;
+	padding: 12px 0;
 
 	&__content {
 		max-width: $container_width;
@@ -12,6 +11,11 @@
 		margin: auto;
 		display: flex;
 		justify-content: space-between;
+	}
+
+	.btn {
+		font-size: 13px;
+		padding: 7px 20px;
 	}
 }
 
