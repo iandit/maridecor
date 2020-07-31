@@ -1,6 +1,20 @@
+// begin footer
 footer.footer
-    .container_center
-        p
-        | &copy; 2016 |
-        i.fa.fa-github(aria-hidden='true') &nbsp;
-        a(href='#') View Source
+    .footer__inner
+        .footer__logo
+            a.foterLogo(href="./")
+                span.foterLogo__title МариДекор
+                span.foterLogo__text салон штор
+        .footer__info
+            .footer__address
+                i.icon_marker
+                span г. Королев, пр-т Космонавтов, 34б, ТЦ Юпитер, 2 этаж, пав. 213
+            .footer__time
+                i.icon_clock
+                span с 8:00 до 20:00
+            .footer__phone
+                a(href="tel: "+tel+"")
+                    i.icon_phone
+                    span= tel
+
+// end footer

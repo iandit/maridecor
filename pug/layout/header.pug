@@ -1,13 +1,19 @@
+// begin header
 header.header
-    .header__content
-        .header__left
-            a.logo(href="/")
-                img(src="img/logo.png", alt="alt")
-                span.logo__text салон штор
+    .header__inner
+        .header__logo
+            a.logo(href="./")
+                .logo__title МариДекор
+                .logo__text салон штор
         .header__info
-            .header__address !{address}
-            .header__time !{time}
+            .header__address
+                i.icon_marker
+                span г. Королев, пр-т Космонавтов, 34б, ТЦ Юпитер, 2 этаж, пав. 213
+            .header__time
+                i.icon_clock
+                span с 8:00 до 20:00
         .header__action
-            a.btn(href="#")
-                i.icon_insta 
-                |наш инстаграм
+            a.btn.btn_icon(href="#")
+                i.icon_insta.gradient_icon
+                span наш инстаграм
+// end header

@@ -1,7 +1,8 @@
--var version = '0.1';
-- var tel = '+7 (967) 028-71-11';
-- var address = '<i class="icon_marker"></i> г. Королев, пр-т Космонавтов, 34б, ТЦ Юпитер, 2 этаж, пав. 213';
-- var time = '<i class="icon_clock"></i> с 8:00 до 20:00';
+block variables
+    - var pageTitle;
+    - var tel = '+7 (967) 028-71-11';
+
+
 
 <!DOCTYPE html>
 html(lang="en")
@@ -9,15 +10,27 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Document
 
-        link(rel="stylesheet", type="text/css", href="css/style.css?"+version+"")
-    body
+        link(rel="stylesheet", type="text/css", href="./css/swiper-bundle.css")
+
+        link(rel="stylesheet", type="text/css", href="./css/style.css")
+
+        title=pageTitle
+
+    body(style="background-color: #ffffff;")
+
         include header.pug
-
-        main.main_content
+        // begin main
+        main.main
+            include top.pug
             block content
+            include bottom.pug
+        // end main
 
         include footer.pug
 
-        include scripts.pug
+        script(src="./js/jquery.js")
+        script(src="./js/swiper-bundle.js")
+
+        script(src="./js/modal.js") 
+        script(src="./js/script.js")

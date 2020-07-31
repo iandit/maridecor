@@ -1,0 +1,62 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: $main_font_family;
+    line-height: $main_line_height;
+    font-size: $main_font_size;
+    color: $main_color;
+    font-weight: 400;
+    margin: 0;
+    min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+
+    &:after,
+    &:before {
+        box-sizing: border-box;
+    }
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.container_center {
+    max-width: $container_width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+a {
+    transition: color 0.3s;
+
+    &:active {
+        // outline: none;
+    }
+    // outline: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+//
+// Найти блоки которые вываливается за край
+// * {
+//     border: 1px solid #000;
+//
+
+// Все обрезает что вываливеется
+// .wrapper {
+//     overflow: hidden;
+// }

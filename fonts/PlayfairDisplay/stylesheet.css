@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('PlayfairDisplay-Medium.eot');
+    src: url('PlayfairDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+        url('PlayfairDisplay-Medium.woff2') format('woff2'),
+        url('PlayfairDisplay-Medium.woff') format('woff'),
+        url('PlayfairDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('PlayfairDisplay-Regular.eot');
+    src: url('PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('PlayfairDisplay-Regular.woff2') format('woff2'),
+        url('PlayfairDisplay-Regular.woff') format('woff'),
+        url('PlayfairDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

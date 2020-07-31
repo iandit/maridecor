@@ -2,25 +2,102 @@ extends layout/layout.pug
 
 block content
     .container_center
+        // begin product
+        section#product.product.section
+            .section__inner
+                .section__nav
+                    .section__navigation
+                        i.icon_arrow-left.sliderNav_left
 
-        // begin home
-        section#home.home.section
-            .home__content(style="background-image: url(img/shutterstock_793058929_1.jpg)")
-                h1.home__title БОЛЬШОЙ ВЫБОР ТКАНЕЙ ТЮЛЬ И ПОРТЬЕРЫ
-                h2.home__subtitle Шьем быстро, качественно и недорого
-                a.home__tel(href="tel: "+tel+"")= tel
-                .home__action
-                    button.btn(type="button") ЗАКАЗАТЬ ЗВОНОК
+                    .section__pagination
 
-            // begin advantages
-            .advantages
-                .advantages__content
-                    each item in [{text: 'ВЫЕЗД И ЗАМЕР БЕСПЛАТНО', img: 'car'},{text: 'гарантия качества', img: 'warant'},{text: 'приемлемые цены', img: 'price'},{text: 'УСЛУГА ДИЗАЙНЕРА', img: 'design'}]
-                        .advantages__item
-                            .advantages__img
-                                img(src="img/"+item.img+".svg", alt= item.text)
-                            .advantages__text= item.text
+                    .section__navigation
+                        i.icon_arrow-right.sliderNav_right
 
-            // end advantages
+                h2.section__title ШТОРЫ
+                a.section__link(href="./product.html")
+                    span в каталог
+                    i.icon_arrow-right
 
-        // end home
+            .swiper-container.swiper
+                .swiper-wrapper
+                    each item in [1, 2, 3, 4, 5, 6, 7, 8]
+                        .swiper-slide
+                            .product__content
+                                .productImg(style="background-image: url(./img/gurtains/gurtains-"+item+".jpg)")
+                                .productDesc
+                                    .productDesc__title
+                                        .productDesc__name Название товара №1
+                                        .productDesc__heart
+                                            img(src="./img/heart.svg", alt="alt")
+                                    .productDesc__category ШТОРЫ
+                                    .productDesc__price
+                                        span.price 10 000 ₽
+                                        span.price_old 20 000 ₽
+        // end product
+        // begin product
+        section#product-2.product-2.section
+            .section__inner
+                .section__nav
+                    .section__navigation
+                        i.icon_arrow-left.sliderNav_left
+
+                    .section__pagination
+
+                    .section__navigation
+                        i.icon_arrow-right.sliderNav_right
+
+                h2.section__title тюль
+                a.section__link(href="./product.html")
+                    span в каталог
+                    i.icon_arrow-right
+
+            .swiper-container.swiper
+                .swiper-wrapper
+                    each item in [1, 2, 3, 4, 5, 6, 7, 8]
+                        .swiper-slide
+                            .product__content
+                                .productImg(style="background-image: url(./img/tulle/tulle-"+item+".jpg)")
+                                .productDesc
+                                    .productDesc__title
+                                        .productDesc__name Название товара №1
+                                        .productDesc__heart
+                                            img(src="./img/heart.svg", alt="alt")
+                                    .productDesc__category тюль
+                                    .productDesc__price
+                                        span.price 10 000 ₽
+                                        span.price_old 20 000 ₽
+        // end product
+        // begin product
+        section#product-3.product-3.section
+            .section__inner
+                .section__nav
+                    .section__navigation
+                        i.icon_arrow-left.sliderNav_left
+
+                    .section__pagination
+
+                    .section__navigation
+                        i.icon_arrow-right.sliderNav_right
+
+                h2.section__title карнизы
+                a.section__link(href="./product.html")
+                    span в каталог
+                    i.icon_arrow-right
+
+            .swiper-container.swiper
+                .swiper-wrapper
+                    each item in [1, 2, 3, 4, 5, 6, 7, 8]
+                        .swiper-slide
+                            .product__content
+                                .productImg(style="background-image: url(./img/cornice/cornice-"+item+".jpg)")
+                                .productDesc
+                                    .productDesc__title
+                                        .productDesc__name Название товара №1
+                                        .productDesc__heart
+                                            img(src="./img/heart.svg", alt="alt")
+                                    .productDesc__category карнизы
+                                    .productDesc__price
+                                        span.price 10 000 ₽
+                                        span.price_old 20 000 ₽
+        // end product

@@ -1,0 +1,24 @@
+//- begin home
+.container_center
+    section#home.home.section
+        .home__content(style="background-image: url(./img/home-bg.jpg)")
+            .home__inner
+                h1.home__title БОЛЬШОЙ ВЫБОР ТКАНЕЙ ТЮЛЬ И ПОРТЬЕРЫ
+                h2.home__subtitle Шьем быстро, качественно и недорого
+                .home__tel
+                    a(href="tel: "+tel+"")= tel
+                .home__action
+                    button.btn(type="button") ЗАКАЗАТЬ ЗВОНОК
+
+        // begin advantages
+        .advantages
+            .advantages__content
+                each item in [{text: 'ВЫЕЗД И ЗАМЕР БЕСПЛАТНО', img: 'car'},{text: 'гарантия качества', img: 'warant'},{text: 'приемлемые цены', img: 'price'},{text: 'УСЛУГА ДИЗАЙНЕРА', img: 'design'}]
+                    .advantages__item
+                        .advantages__plate
+                            .advantages__img
+                                img(src="./img/"+item.img+".svg", alt= item.text)
+                            .advantages__text= item.text
+
+        // end advantages
+//- end home

@@ -1,0 +1,51 @@
+.container_center
+    // begin request
+    section#request.request.section
+        .request__content
+            h2.request__title ОСТАВИТЬ ЗАЯВКУ
+            .request__subtitle На выезд и замер
+
+            form.form(action="send.php")
+                //- из какой формы на сайте
+                input(type="hidden" name="subject" value="форма с сайта МариДекор салон штор")
+                //- проверка спама
+                input(type="hidden" name="notspam" value="")
+                .form__row
+                    label(for="userName") Ваше имя
+                    input(type="text" id="userName" name="userName" required placeholder="Введите ваше имя")
+
+                .form__row
+                    label(for="telephone") Ваш телефон
+                    input(type="text" id="telephone" name="telephone" required placeholder="Введите ваш телефон")
+
+                .form__row
+                    input(type="checkbox" checked="checked")
+                    span.form__text Я согласен на обработку персональных данных
+
+                .form__row
+                    .form__button
+                        button.btn(type="submit") Отправить
+                // Begin Modal info
+                .modal.modal-sm.fade.info#info
+                    .modal-dialog
+                        .modal-content
+                            a(href="#" class="modal-close" data-dismiss="modal")
+                            .form__message
+                // End modal info
+
+        .offers
+            ul.offers__list
+                li.offers__item Пошив любой сложности: 
+                    span покрывала, подушки, ламбрекены, скатерти.
+                li.offers__item Хороший выбор карнизов: 
+                    span металлические, пластиковые, эркерные, аллюминиевые.
+                li.offers__item Реставрация: 
+                    span стульев, табуреток, обшивка тканями.
+
+    // end request
+
+// begin map
+.map#map
+    .map__content
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A07b01da32fc004fca237e16ec58b68259636197cd8fa07e7d0e3ac15123bab4d&amp;source=constructor" width="100%" height="465" frameborder="0"></iframe>
+// end map

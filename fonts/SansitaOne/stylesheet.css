@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Sansita One';
+    src: url('SansitaOne.eot');
+    src: url('SansitaOne.eot?#iefix') format('embedded-opentype'),
+        url('SansitaOne.woff2') format('woff2'),
+        url('SansitaOne.woff') format('woff'),
+        url('SansitaOne.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,135 @@
+// Этот миксин подключает шрифты
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf) {
+    $src: null;
+
+    $extmods: (
+        eot: "?",
+        svg: "#" + str-replace($name, " ", "_")
+    );
+
+    $formats: (
+        otf: "opentype",
+        ttf: "truetype"
+    );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+// Placeholder for input
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content
+    };
+
+    &:-moz-placeholder {
+        @content
+    };
+
+    &::-moz-placeholder {
+        @content
+    };
+
+    &:-ms-input-placeholder {
+        @content
+    };
+}
+
+//form
+
+@mixin formField {
+    input:not([type]),
+    input[type=datetime],
+    input[type=email],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    input[type=url],
+    textarea {
+        @content;
+    }
+}
+
+// Ширина колонок сетки
+// Использование
+// @include grid(2, 15px); две колонки между ними растояние 15px
+// по умолчанию переменных ширина 100%, отступы 15px
+@mixin grid($column: 1, $gup: 0) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$gup;
+
+    > div,
+    > a {
+        display: flex;
+        padding-left: $gup;
+        width: 100% / $column;
+        margin-bottom: $gup * 2;
+    }
+}
+@mixin ss-grid($column: 1, $gup: 0) {
+    @media (min-width: 481px) {
+        @include grid($column, $gup);
+    }
+}
+@mixin xs-grid($column: 1, $gup: 0) {
+    @media (min-width: 768px) {
+        @include grid($column, $gup);
+    }
+}
+@mixin sm-grid($column: 1, $gup: 0) {
+    @media (min-width: 992px) {
+        @include grid($column, $gup);
+    }
+}
+@mixin md-grid($column: 1, $gup: 0) {
+    @media (min-width: 1200px) {
+        @include grid($column, $gup);
+    }
+}
+// @media (max-width: 767px) {
+//
+// }
+
+// пример подключения
+// .grid {
+//     @include grid(3,15px);
+//     @include xs-grid(4,15px);
+//
+//     &__item {}
+//
+//     &__plate {
+//         border: 1px solid #000;
+//         width: 100%;
+//         height: 100px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         background-color: red;
+//     }
+// }
+
+// index.pug
+// .grid
+//         .grid__item
+//             .grid__plate
+//         .grid__item
+//             .grid__plate
+//         .grid__item
+//             .grid__plate
+//         .grid__item
+//             .grid__plate
+//         .grid__item
+//             .grid__plate

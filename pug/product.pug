@@ -1,0 +1,106 @@
+extends layout/layout.pug
+
+block content
+    // begin productList
+    section#productList.productList.section
+        .container_center
+            .productList__content
+                .tabs
+                    .tabs__item.active(data-tab="#plate-1") РАБОТЫ
+                    .tabs__item(data-tab="#plate-2") ШТОРЫ
+                    .tabs__item(data-tab="#plate-3") ТЮЛЬ
+                    .tabs__item(data-tab="#plate-4") КАРНИЗЫ
+                .tabContent
+                    .tabContent__item.active#plate-1
+                        .grid
+                            each item in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+                                .grid__item
+                                    .grid__plate
+                                        .product__content
+                                            .productImg(style="background-image: url(./img/cornice/cornice-"+item+".jpg)")
+                                            .productDesc
+                                                .productDesc__title
+                                                    .productDesc__name Название товара №1
+                                                    .productDesc__heart
+                                                        img(src="./img/heart.svg", alt="alt")
+                                                .productDesc__category РАБОТЫ
+                                                .productDesc__price
+                                                    span.price 10 000 ₽
+                                                    span.price_old 20 000 ₽
+
+                    .tabContent__item#plate-2
+                        .grid
+                            each item in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+                                .grid__item
+                                    .grid__plate
+                                        .product__content
+                                            .productImg(style="background-image: url(./img/gurtains/gurtains-"+item+".jpg)")
+                                            .productDesc
+                                                .productDesc__title
+                                                    .productDesc__name Название товара №1
+                                                    .productDesc__heart
+                                                        img(src="./img/heart.svg", alt="alt")
+                                                .productDesc__category РАБОТЫ
+                                                .productDesc__price
+                                                    span.price 10 000 ₽
+                                                    span.price_old 20 000 ₽
+
+                    .tabContent__item#plate-3
+                        .grid
+                            each item in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+                                .grid__item
+                                    .grid__plate
+                                        .product__content
+                                            .productImg(style="background-image: url(./img/cornice/cornice-"+item+".jpg)")
+                                            .productDesc
+                                                .productDesc__title
+                                                    .productDesc__name Название товара №1
+                                                    .productDesc__heart
+                                                        img(src="./img/heart.svg", alt="alt")
+                                                .productDesc__category РАБОТЫ
+                                                .productDesc__price
+                                                    span.price 10 000 ₽
+                                                    span.price_old 20 000 ₽
+
+                    .tabContent__item#plate-4
+                        .grid
+                            each item in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+                                .grid__item
+                                    .grid__plate
+                                        .product__content
+                                            .productImg(style="background-image: url(./img/gurtains/gurtains-"+item+".jpg)")
+                                            .productDesc
+                                                .productDesc__title
+                                                    .productDesc__name Название товара №1
+                                                    .productDesc__heart
+                                                        img(src="./img/heart.svg", alt="alt")
+                                                .productDesc__category РАБОТЫ
+                                                .productDesc__price
+                                                    span.price 10 000 ₽
+                                                    span.price_old 20 000 ₽
+
+            .pagination                                
+                ul.pagination__list
+
+                    li.pagination__item.prev
+                        a(href="#")
+
+                    li.pagination__item
+                        a.pagination__link.active(href="#") 1
+                    li.pagination__item
+                        a.pagination__link(href="#") 2
+                    li.pagination__item
+                        a.pagination__link(href="#") 3
+                    li.pagination__item
+                        a.pagination__link(href="#") 4
+                    li.pagination__item
+                        a.pagination__link(href="#") 5
+                    li.pagination__item
+                        a.pagination__link(href="#") 6
+
+                    li.pagination__item.next
+                        a(href="#")
+
+
+
+    // end productList
